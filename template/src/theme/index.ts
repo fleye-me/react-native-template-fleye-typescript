@@ -4,14 +4,14 @@ import {colors} from './colors';
 import {components} from './components';
 import {fontConfig, fonts} from './fonts';
 
-export const theme = extendTheme({
+export const customTheme = extendTheme({
   colors,
   components,
   fontConfig,
   fonts,
 });
 
-type CustomThemeType = typeof theme;
+type CustomThemeType = typeof customTheme;
 
 declare module 'native-base' {
   interface ICustomTheme extends CustomThemeType {}
