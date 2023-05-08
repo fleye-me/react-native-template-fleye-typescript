@@ -5,13 +5,13 @@ import {SignedInNavigatorRoutesParamList} from './SignedIn/types';
 export type RootStackParamList = SignInNavigatorRoutesParamList &
   SignedInNavigatorRoutesParamList;
 
+export type RootRouteProps<T extends keyof RootStackParamList> = NRouteProp<
+  RootStackParamList,
+  T
+>;
+
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends RootStackParamList {}
   }
 }
-
-export type RootRouteProps<T extends keyof RootStackParamList> = NRouteProp<
-  RootStackParamList,
-  T
->;
